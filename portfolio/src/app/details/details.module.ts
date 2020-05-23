@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
-import { RouterModule } from '@angular/router';
-
+import { DetailsRoutingModule } from './details-routing.module';
 
 
 @NgModule({
   declarations: [PersonalDetailsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      {path: 'personal-detail', component: PersonalDetailsComponent}
-    ])
+    DetailsRoutingModule
   ],
   exports: [
     PersonalDetailsComponent
