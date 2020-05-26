@@ -1,10 +1,10 @@
 <div class="row mt-4">
     <div class="col-4"></div>
     <div class="col-4">
-<form [formGroup]= "detailsForm"> 
+<form [formGroup]= "detailsForm" (ngSubmit)="Save(detailsForm.value)" > 
     <div class="form-group">
         <label for="exampleInputName">Name</label>
-        <input type="text" formControlName = "firstName" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+        <input type="text" required [ngClass]="{'error': detailsForm.controls.firstName.invalid}"  formControlName = "firstName" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
         
       </div>
       <div class="form-group">
