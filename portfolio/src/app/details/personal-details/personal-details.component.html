@@ -1,8 +1,8 @@
 <div class="row mt-4">
-    <div class="col-4"></div>
-    <div class="col-4">
+  <div class="col-xs-1 col-sm-1 col-md-2 col-lg-3 col-xl-3"></div>
+  <div class="col-xs-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 detail-form">
 <form [formGroup]= "detailsForm" (ngSubmit)="Save(detailsForm.value)" > 
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="exampleInputName">Name</label>
         <input type="text" required [ngClass]="{'error': detailsForm.controls.firstName.invalid}"  formControlName = "firstName" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
         
@@ -25,8 +25,8 @@
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mb-4">Submit</button>
   </form>
 </div>
-<div class="col-4"></div>
+<div class="col-xs-1 col-sm-1 col-md-2 col-lg-3 col-xl-3"></div>
 </div>

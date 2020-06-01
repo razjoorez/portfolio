@@ -1,4 +1,19 @@
+@import '../../../styles.scss';
+
+
 .error{
 
     background-color: #e3c3c5;
+}
+
+.detail-form{
+
+    background-color: goldenrod;
+    color: black;
+    border-radius: 5%;
+}
+
+.btn.btn-primary{
+    background-color: black;
+    border-radius: 5%;
 }
