@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-// @import './reset';
-@import './variables';
-@import './small';
-@import './medium';
-@import './large';
+@import "phone-default";
+@import "tablet";
+@import "desktop";
+@import "reset";
+@import "variables";
+@import "small";
+@import "medium";
+@import "large";
