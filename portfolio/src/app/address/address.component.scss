@@ -6,13 +6,34 @@ p {
 
 
 
-.form-control{
+ .form-control{
 
-    background-color:$main-color;
+   //background-color:$main-color;
     color: wheat;
+   // border-color: yellow;
 }
 
-select option {
-    background-color: $main-color;
+.btn.btn-primary.dropdown-toggle {
+    width: 100%;
+    //background-color:$main-color;
     color: wheat;
+  // border-color:#a83c34;
 }
+
+// select option {
+//     background-color: $main-color;
+//     color: wheat;
+// }
+
+// .btn-link:hover {
+//     color: green;
+//     text-decoration: underline;
+//   }
+
+//   .btn-primary {
+//     color: #fff;
+//     background-color: green;
+//     border-color: green;
+//   }
+  
+

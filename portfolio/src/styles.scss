@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-// @import './reset';
-@import './variables';
-@import './small';
-@import './medium';
-@import './large';
+
+$theme-colors: (
+  "primary":#869c88,
+  "secondary":#cf7b55,
+  "success": #c6d160,
+   "dark": #a83c34,
+  "danger": #ff4136
+);
+
+@import 'bootstrap';
+@import "phone-default";
+@import "tablet";
+@import "desktop";
+@import "reset";
+@import "variables";
+@import "small";
+@import "medium";
+@import "large";
+
+// "node_modules/bootstrap/dist/css/bootstrap.min.css"
