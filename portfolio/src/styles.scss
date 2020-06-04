@@ -9,6 +9,9 @@ $theme-colors: (
 );
 $body-color: wheat;
 
+body {
+    overflow-y: hidden;
+}
 @import 'bootstrap';
 @import "phone-default";
 @import "tablet";
