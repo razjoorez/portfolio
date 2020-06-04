@@ -14,7 +14,7 @@ export class PersonalDetailsComponent implements OnInit {
   ngOnInit() {
     let firstName = new FormControl('John', Validators.required);
     let lastName = new FormControl('smith', Validators.required);
-    let email = new FormControl('', Validators.required);
+    let email = new FormControl('someone@yaaa.com', Validators.required);
     this.detailsForm = new FormGroup(
       {
         firstName: firstName,
