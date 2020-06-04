@@ -8,6 +8,9 @@ $theme-colors: (
   "danger": #ff4136
 );
 
+body {
+    overflow-y: hidden;
+}
 @import 'bootstrap';
 @import "phone-default";
 @import "tablet";
