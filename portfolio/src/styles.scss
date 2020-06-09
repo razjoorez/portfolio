@@ -23,6 +23,41 @@ body {
 @import "medium";
 @import "large";
 
+%subnav {
+  display: block;
+  float: left;
+  width: 25%;
+  margin: 2em 0 0 0;
+  padding: .5em 1em .2em 1em;
+  color: $main-color;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
+  transition: background ease .5s;
+  
+}
+
+.subnav-link {
+  @extend %subnav;
+  background-color: $background-color;
+  
+}
+
+.subnav-link:hover {
+  @extend %subnav;
+  background-color:$font-color;
+}
+
+.subnav-active {
+  @extend %subnav;
+  background-color: $blue;
+}
+
+
+//used in span to hide parts of text in small screen size
+.hideSmall {
+  display: none;
+}
+
 // "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 
