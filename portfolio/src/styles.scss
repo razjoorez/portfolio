@@ -82,16 +82,3 @@ body {
 //Mixins
 
 
-@mixin columns($count, $line_color) {
-  -webkit-column-count: $count ;  /* Chrome, Safari, Opera */
-  -moz-column-count: $count ;    /* FireFox */
-  column-count:$count;
-
-  -webkit-column-gap: $count ;
-  -moz-column-gap: $count ;
-  column-gap: $count ;
-
-  -webkit-column-rule: 1px outset $line_color;
-  -moz-column-rule: 1px outset $line_color;
-  column-rule: 1px outset $line_color;
-}

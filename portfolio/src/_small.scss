@@ -1,7 +1,10 @@
+@import "./variables.scss";
 @media only screen and (max-width: 576px) {
 
 
-
+.multicol {
+    @include columns(2, red);
+}
   
 
 
