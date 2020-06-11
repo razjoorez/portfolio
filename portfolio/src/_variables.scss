@@ -20,3 +20,9 @@ $gutter: 2%;
         -moz-column-rule: 1px outset $line_color;
         column-rule: 1px outset $line_color;
       }
+
+
+      @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .small#{$i}  {width: $w; float: left;}     
+      }
