@@ -2,6 +2,27 @@
 $main-color:#a83c34;
 $font-color: wheat;
 $background-color: #63574f;
+$blue: blue;
 
         // css gutter
 $gutter: 2%;
+
+@mixin columns($count, $line_color) {
+        -webkit-column-count: $count ;  /* Chrome, Safari, Opera */
+        -moz-column-count: $count ;    /* FireFox */
+        column-count:$count;
+      
+        -webkit-column-gap: $gutter ;
+        -moz-column-gap: $gutter ;
+        column-gap: $gutter ;
+      
+        -webkit-column-rule: 1px outset $line_color;
+        -moz-column-rule: 1px outset $line_color;
+        column-rule: 1px outset $line_color;
+      }
+
+
+      @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .small#{$i}  {width: $w; float: left;}     
+      }

@@ -1,8 +1,25 @@
+@import "./variables.scss";
 @media only screen and (max-width: 576px) {
 
 
-
+.multicol {
+    @include columns(2, red);
+}
   
+@for $i from 1 through 12 {
+    $w:($i/12)*100%;
+    .small#{$i}  {width: $w; float: left;}     
+  }
 
+        // Text wrapping around a triangular image
+
+  .img-triangle {
+      float: left;
+      margin: 10px 20px 20px 0;
+      -webkit-shape-outside: polygon(0 0, 100% 0, 0 100%);
+      shape-outside: polygon(0 0, 100% 0, 0 100%);
+
+
+  }
 
 }
