@@ -14,11 +14,17 @@ export class AddressComponent implements OnInit {
   constructor(private addressLookup: AddressLookUpService) { }
 
   ngOnInit() {
+  }
+
+  findAdd() {
     this.addressLookup.getAddress('ww').subscribe(
-      res => console.log('address is: ', res )
-    
+      res => {
+        console.log('address is: ', res );
+        this.address = res;
+        console.log('address country', this.address);
+        console.log(this.address);
+      }
     );
-    console.log(this.address);
   }
 
 }
