@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AddressRoutingModule } from './address-routing.module';
 import { AddressComponent } from './address.component';
+import { AddressLookUpService } from '../services/address-look-up.service';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { AddressComponent } from './address.component';
   imports: [
     CommonModule,
     AddressRoutingModule
-  ]
+  ],
+  providers: [AddressLookUpService]
 })
 export class AddressModule { }
