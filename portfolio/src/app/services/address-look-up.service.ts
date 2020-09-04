@@ -14,7 +14,8 @@ export class AddressLookUpService {
   constructor(private http: HttpClient) { }
   apiKey= 'zR3470daaUSOwd_hvvd-ag28015';
   adminKey = 'XvpW1fBcPEecmwLwqahmAA28015';
-  addressUrl = '';
+  addressUrl = 'https://api.getAddress.io/find/w148jb?api-key=' + this.apiKey;
+  
   // $address: Observable<IAddress[]>;
   // tslint:disable-next-line: no-unused-expression
   // tslint:disable-next-line: align
@@ -22,8 +23,8 @@ export class AddressLookUpService {
   //   return this.http.get<$address[]>(this.addressUrl);
   // }
   getAddress(postCode: string): Observable<IAddress[]> {
-    return this.http.get<IAddress[]>(this.addressUrl + postCode + this.apiKey).pipe(
-      catchError(this.handleError<IAddress[]>('getAddress', []))
+    return this.http.get<IAddress[]>(this.addressUrl).pipe(
+      catchError(this.handleError<IAddress[]>('getAddress', [])),
     );
   }
   /**
@@ -39,7 +40,7 @@ private handleError<T>(operation = 'operation', result?: T) {
     console.error(error); // log to console instead
 
     // TODO: better job of transforming error for user consumption
-    //this.log(`${operation} failed: ${error.message}`);
+    console.log(`${operation} failed: ${error.message}`);
 
     // Let the app keep running by returning an empty result.
     return of(result as T);
