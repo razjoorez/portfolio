@@ -10,12 +10,27 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 export class AddressLookUpService {
-  
   constructor(private http: HttpClient) { }
-  apiKey= 'zR3470daaUSOwd_hvvd-ag28015';
+  apiKey = 'zR3470daaUSOwd_hvvd-ag28015';
   adminKey = 'XvpW1fBcPEecmwLwqahmAA28015';
   addressUrl = 'https://api.getAddress.io/find/w148jb?api-key=' + this.apiKey;
-  
+
+  addresses: IAddress[] = [
+    {
+    firstLine: 'llfff',
+    secondLine: '11',
+    postCode: '12',
+    country: '32',
+    town: 'tt'
+  },
+  {
+    firstLine: '22222',
+    secondLine: '11',
+    postCode: '12',
+    country: '32',
+    town: 'tt'
+  }
+];
   // $address: Observable<IAddress[]>;
   // tslint:disable-next-line: no-unused-expression
   // tslint:disable-next-line: align
@@ -26,7 +41,18 @@ export class AddressLookUpService {
     return this.http.get<IAddress[]>(this.addressUrl).pipe(
       catchError(this.handleError<IAddress[]>('getAddress', [])),
     );
+  };
+
+  getFakeAdd() {
+    return  this.addresses;
   }
+  
+
+
+  
+    
+
+
   /**
  * Handle Http operation that failed.
  * Let the app continue.
