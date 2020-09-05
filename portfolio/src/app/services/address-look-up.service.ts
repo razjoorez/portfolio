@@ -17,18 +17,32 @@ export class AddressLookUpService {
 
   addresses: IAddress[] = [
     {
-    firstLine: 'llfff',
-    secondLine: '11',
-    postCode: '12',
-    country: '32',
-    town: 'tt'
+    firstLine: '1 Kentish House',
+    secondLine: 'Ashford Road',
+    postCode: 'SW8 12ab',
+    country: 'UK',
+    town: 'London'
   },
   {
-    firstLine: '22222',
-    secondLine: '11',
-    postCode: '12',
-    country: '32',
-    town: 'tt'
+    firstLine: '2 Kentish House',
+    secondLine: 'Ashford Road',
+    postCode: 'SW8 12ab',
+    country: 'UK',
+    town: 'London'
+  },
+  {
+    firstLine: '3 Kentish House',
+    secondLine: 'Ashford Road',
+    postCode: 'SW8 12ab',
+    country: 'UK',
+    town: 'London'
+  },
+  {
+    firstLine: '4 Kentish House',
+    secondLine: 'Ashford Road',
+    postCode: 'SW8 12ab',
+    country: 'UK',
+    town: 'London'
   }
 ];
   // $address: Observable<IAddress[]>;
