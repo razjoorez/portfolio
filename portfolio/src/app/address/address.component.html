@@ -12,8 +12,8 @@
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
     <ul>
       <li *ngFor="let add of address">
-      <!-- <a class="dropdown-item" href=""></a> -->
-      <div class="dropdown-item">{{add.firstLine}},{{add.secondLine}}, {{add.postCode}},{{add.town}}, {{add.country}} </div>  
+     
+      <div class="dropdown-item" (click)="Selected(add)">{{add.firstLine}},{{add.secondLine}}, {{add.postCode}},{{add.town}}, {{add.country}} </div>  
     </li>
   </ul>
       
@@ -25,7 +25,21 @@
     <option>Default select</option>
     <option>Default select</option>
   </select> -->
-  <form>
+
+ <form [formGroup]= addressForm >
+   <div class="form-group">
+      <label for="firstLine">first line: </label>
+   <input type='text' formControlName="firstLine" class="form-control" id="firstLine">
+   <label for="secondLine">Second line: </label>
+   <input type='text' formControlName="secondLine" class="form-control" id="secondLine">
+   <label for="postCode">Post Code: </label>
+   <input type='text' formControlName="postCode" class="form-control" id="postCode">
+   </div>
+   
+   <button type="submit" class="form-control" class="btn btn-primary">Submit</button>
+ </form>
+
+  <!-- <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -40,7 +54,7 @@
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </form> -->
 
 
   
