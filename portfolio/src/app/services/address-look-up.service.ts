@@ -24,22 +24,22 @@ export class AddressLookUpService {
     town: 'London'
   },
   {
-    firstLine: '2 Kentish House',
-    secondLine: 'Ashford Road',
+    firstLine: '2 Ashton House',
+    secondLine: 'Dartford Road',
     postCode: 'SW8 12ab',
     country: 'UK',
     town: 'London'
   },
   {
-    firstLine: '3 Kentish House',
-    secondLine: 'Ashford Road',
+    firstLine: '3 Sutton House',
+    secondLine: 'Ibberton Road',
     postCode: 'SW8 12ab',
     country: 'UK',
     town: 'London'
   },
   {
-    firstLine: '4 Kentish House',
-    secondLine: 'Ashford Road',
+    firstLine: '4 Durrells House',
+    secondLine: 'Watford Street',
     postCode: 'SW8 12ab',
     country: 'UK',
     town: 'London'

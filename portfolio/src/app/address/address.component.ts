@@ -23,7 +23,7 @@ export class AddressComponent implements OnInit {
     this.findfake();
   this.addressForm =  new FormGroup(
      {
-       firstLine: new FormControl('ge'),
+       firstLine: new FormControl(''),
        secondLine: new FormControl(''),
        country: new FormControl(''),
        town: new FormControl(''),
