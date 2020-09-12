@@ -16,7 +16,7 @@ p {
 .btn.btn-primary.dropdown-toggle {
     width: 100%;
     //background-color:$main-color;
-    color: wheat;
+    color:black;
   // border-color:#a83c34;
 }
 
@@ -61,4 +61,8 @@ p {
   .right {
 
     background-color:black;
+  }
+
+  .form-control {
+    color: black;
   }

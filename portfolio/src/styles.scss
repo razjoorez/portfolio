@@ -7,18 +7,19 @@ $theme-colors: (
    "dark": #a83c34,
   "danger": #ff4136
 );
-$body-color: wheat;
+$body-color: black;
 $border-radius:               1.2rem !default;
 
 body {
     overflow-y: hidden;
 }
 @import 'bootstrap';
+@import "variables";
 @import "phone-default";
 @import "tablet";
 @import "desktop";
 @import "reset";
-@import "variables";
+
 @import "small";
 @import "medium";
 @import "large";
