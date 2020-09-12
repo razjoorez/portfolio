@@ -7,11 +7,19 @@
   }
   
   .left {
-
+    margin: auto;
+    width: 100%;
     background-color:blue;
   }
 
   .right {
-
+    margin: auto;
+    width: 100%;
     background-color:black;
+  }
+
+  .customGrid {
+    min-height: 60px;
+     border: 1px solid black;
+     border-radius: .75em;
   }
