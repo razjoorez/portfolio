@@ -12,9 +12,9 @@ export class PersonalDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let firstName = new FormControl('John', [Validators.required, Validators.minLength(1)]);
-    let lastName = new FormControl('smith', [Validators.required, Validators.minLength(1)]);
-    let email = new FormControl('someone@yaaa.com', Validators.required);
+    let firstName = new FormControl('', [Validators.required, Validators.minLength(1)]);
+    let lastName = new FormControl('', [Validators.required, Validators.minLength(1)]);
+    let email = new FormControl('', Validators.required);
     let password =  new FormControl('', Validators.required)
     this.detailsForm = new FormGroup(
       {

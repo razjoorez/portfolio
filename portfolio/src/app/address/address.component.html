@@ -28,14 +28,14 @@
 
  <form [formGroup]= addressForm >
    <div class="form-group">
-    <label for="firstLine">First line: </label>
+    <label for="firstLine">First line: * </label>
    <input type='text' formControlName="firstLine"  class="form-control" id="firstLine" required >
-   <label for="secondLine">Second line: </label>
    <div *ngIf="addressForm.controls.firstLine.invalid && (addressForm.controls.firstLine.touched ||addressForm.controls.firstLine.dirty)" class="alert alert-danger" role="alert">
     Please Enter Address
   </div>
+   <label for="secondLine">Second line: </label>
    <input type='text' formControlName="secondLine" class="form-control" id="secondLine">
-   <label for="postCode">Post Code: </label>
+   <label for="postCode">Post Code: *</label>
    <input type='text' formControlName="postCode" class="form-control" id="postCode">
    <div *ngIf="addressForm.controls.postCode.invalid && (addressForm.controls.postCode.touched ||addressForm.controls.postCode.dirty)" class="alert alert-danger" role="alert" required>
     Please Enter Post Code/Zip
