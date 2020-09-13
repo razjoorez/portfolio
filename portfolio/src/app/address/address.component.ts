@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AddressLookUpService } from '../services/address-look-up.service';
 import { IAddress } from '../models/iaddress';
-import { map } from 'rxjs/operators';
+import { map, first } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { FormControl, FormGroup} from '@angular/forms';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-address',
@@ -18,19 +18,22 @@ export class AddressComponent implements OnInit {
   constructor(private addressLookup: AddressLookUpService) { }
   addressForm: FormGroup;
   ngOnInit() {
-    //this.findAdd();
-    //console.log('hello', this.$address[0]);
-    this.findfake();
+    let firstLine = new FormControl('',[Validators.required, Validators.minLength(1)]);
+    let secondLine = new FormControl('');
+    let country = new FormControl('');
+    let town = new FormControl('');
+    let postCode = new FormControl('',Validators.required);
+    
   this.addressForm =  new FormGroup(
      {
-       firstLine: new FormControl(''),
-       secondLine: new FormControl(''),
-       country: new FormControl(''),
-       town: new FormControl(''),
-       postCode: new FormControl('')
+       firstLine: firstLine,
+       secondLine: secondLine,
+       country: country,
+       town: town,
+       postCode: postCode
      }
    );
-
+   this.findfake();
   }
 
   findAdd() {
