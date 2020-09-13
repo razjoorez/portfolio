@@ -11,7 +11,7 @@ $body-color: black;
 $border-radius:               1.2rem !default;
 
 body {
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 @import 'bootstrap';
 @import "variables";
