@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SummaryRoutingModule } from './summary-routing.module';
 import { SummaryComponent } from './summary.component';
 import { CustomGridModule } from '../shared/custom-grid/custom-grid.module';
+import { ProductsModule } from '../products/products.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CustomGridModule } from '../shared/custom-grid/custom-grid.module';
   imports: [
     CommonModule,
     SummaryRoutingModule,
-    CustomGridModule
+    CustomGridModule,
+    ProductsModule
   ]
 })
 export class SummaryModule { }
