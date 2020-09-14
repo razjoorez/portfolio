@@ -18,11 +18,11 @@ export class AddressComponent implements OnInit {
   constructor(private addressLookup: AddressLookUpService) { }
   addressForm: FormGroup;
   ngOnInit() {
-    let firstLine = new FormControl('',[Validators.required, Validators.minLength(1)]);
+    let firstLine = new FormControl('', [ Validators.required, Validators.minLength(1)]);
     let secondLine = new FormControl('');
     let country = new FormControl('');
     let town = new FormControl('');
-    let postCode = new FormControl('',Validators.required);
+    let postCode = new FormControl('', Validators.required);
     
   this.addressForm =  new FormGroup(
      {
