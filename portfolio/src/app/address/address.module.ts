@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddressRoutingModule } from './address-routing.module';
 import { AddressComponent } from './address.component';
 import { AddressLookUpService } from '../services/address-look-up.service';
+import { StoreModule } from '@ngrx/store';
+import * as AddressReducer from './state/address.reducer';
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { AddressLookUpService } from '../services/address-look-up.service';
     CommonModule,
     AddressRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature(AddressReducer.addressFeatureKey, AddressReducer.reducer)
   ],
   providers: [AddressLookUpService]
 })

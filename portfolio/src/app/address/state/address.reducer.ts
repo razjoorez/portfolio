@@ -1,6 +1,6 @@
 import { Action, createReducer, on, State } from '@ngrx/store';
 import * as AddressActions from './address.actions';
-import { IAddress } from '../models/iaddress';
+import { IAddress } from '../../models/iaddress';
 
 export interface AddressState {
     address: IAddress;
@@ -20,6 +20,8 @@ const addressReducer = createReducer(
                                         town: state.address.town})
                                         )
                                          );
+
+export const addressFeatureKey = 'Address';
 
 
 

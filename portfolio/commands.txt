@@ -1,0 +1,15 @@
+npm install -g angular-cli-ghpages
+
+ng build —prod —base-href “<  >”
+
+ng build --prod --output-path dist  --base-href "https://razjoorez.github.io/portfolio/“
+
+
+ngh —dir dist  (github pages)
+
+git reset --hard commit_sha
+
+
+//generating module with routing
+
+ng generate module customers --route customers --module app.module
