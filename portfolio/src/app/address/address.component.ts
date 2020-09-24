@@ -4,6 +4,8 @@ import { IAddress } from '../models/iaddress';
 import { map, first } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { AddressState } from './state/address.reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-address',
@@ -15,7 +17,8 @@ export class AddressComponent implements OnInit {
   addSelected: IAddress;
   $address: Observable<IAddress[]>;
 
-  constructor(private addressLookup: AddressLookUpService) { }
+  constructor(private addressLookup: AddressLookUpService,
+              private store: Store<AddressState>) { }
   addressForm: FormGroup;
   ngOnInit() {
     let firstLine = new FormControl('', [ Validators.required, Validators.minLength(1)]);
@@ -61,6 +64,9 @@ export class AddressComponent implements OnInit {
       firstLine: e.firstLine,
       secondLine: e.secondLine,
       postCode: e.postCode
+    });
+    this.store.dispatch({
+      type: '[Address Component] Update'
     });
    // alert(e);
   }

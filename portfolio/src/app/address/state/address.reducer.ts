@@ -1,5 +1,5 @@
 import { Action, createReducer, on, State } from '@ngrx/store';
-import * as AddressActions from './address.actions';
+import * as AddressActions from '../state/address.actions';
 import { IAddress } from '../../models/iaddress';
 
 export interface AddressState {
